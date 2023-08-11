@@ -7,14 +7,16 @@
 // Execute `rustlings hint traits1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 trait AppendBar {
     fn append_bar(self) -> Self;
 }
 
 impl AppendBar for String {
-    // TODO: Implement `AppendBar` for type `String`.
+    fn append_bar(self) -> Self{
+        let mut str_buf = self;
+        str_buf.push_str("Bar");
+        str_buf
+    }
 }
 
 fn main() {
